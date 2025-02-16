@@ -93,15 +93,15 @@
         const contentDiv = document.getElementById("content");
         const errorDiv = document.getElementById("errorMessage");
 
-        if (!nationalId || nationalId !== VALID_NATIONAL_ID) {
+        if (!nationalId) {
+            window.location.replace('/search.html');
+            return;
+        } else if (nationalId !== VALID_NATIONAL_ID) {
           contentDiv.style.display = "none";
           errorDiv.style.display = "block";
         } else {
           contentDiv.style.display = "block";
           errorDiv.style.display = "none";
-
-          // Update the national ID in the table if needed
-          // document.querySelector('td:nth-child(2):nth-of-type(2)')?.textContent = nationalId;
         }
       });
     </script>
