@@ -14,7 +14,7 @@ body {
 }
 
 .search-again a,
-footer a {
+.footer .poweredby {
   text-decoration: none;
   color: #88cfe7;
   font-weight: bold;
@@ -53,6 +53,10 @@ tr td:first-of-type {
   width: 100%;
   font-weight: 100;
   font-size: 9px;
+}
+
+.footer a {
+    color: #666666c5;
 }
 
 .caspio-logo {
