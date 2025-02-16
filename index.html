@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rmg1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!-- Error message container -->
+    <div class="error-message" id="errorMessage">هذا الطالب غير موجود</div>
+
+    <!-- Content container -->
+    <div id="content">
+      <div class="search-again">
+        <a href="/search.html">
+          <i class="fas fa-search"></i>
+          Search Again
+        </a>
+      </div>
+      <!-- Section 2: Results -->
+      <table id="subjects" class="subject-table">
+        <tr>
+          <td>حالة القيد</td>
+          <td>مستجد</td>
+        </tr>
+        <tr>
+          <td>الرقم القومي</td>
+          <td>30602181600564</td>
+        </tr>
+        <tr>
+          <td>كود الطالب</td>
+          <td>1242023</td>
+        </tr>
+        <tr>
+          <td>اسم الطالب</td>
+          <td>حبيبه السعيد محمد عبدالقادر البوشي</td>
+        </tr>
+
+        <tr>
+          <td>الموضة والازياء والثقافة والمجتمع</td>
+          <td>ج ج</td>
+        </tr>
+        <tr>
+          <td>تكنولوجيا صناعة الملابس الجاهزة</td>
+          <td>ج</td>
+        </tr>
+        <tr>
+          <td>أسس بناء الجسم ورسم وتصميم مانيكان الموضه</td>
+          <td>ج ج</td>
+        </tr>
+        <tr>
+          <td>تكنولوجيا المعلومات</td>
+          <td>ج ج</td>
+        </tr>
+        <tr>
+          <td>التشكيل على المانيكان 1</td>
+          <td>ج ج</td>
+        </tr>
+        <tr>
+          <td>لغة إيطالية 1</td>
+          <td>ج</td>
+        </tr>
+      </table>
+
+      <div class="footer">
+        <p>
+          Build with Caspio Trial Account. Do Not Submit passwords or sensitive
+          data <a href="#">Report Abuse</a>
+        </p>
+        <div style="margin-top: 15px">
+          <span>Powered by</span>
+          <img
+            src="https://www.caspio.com/wp-content/themes/caspio/images/logo.svg"
+            alt="Caspio Logo"
+            class="caspio-logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Set your valid national ID here
+      const VALID_NATIONAL_ID = "30602181600564";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const nationalId = urlParams.get("national");
+        const contentDiv = document.getElementById("content");
+        const errorDiv = document.getElementById("errorMessage");
+
+        if (!nationalId || nationalId !== VALID_NATIONAL_ID) {
+          contentDiv.style.display = "none";
+          errorDiv.style.display = "block";
+        } else {
+          contentDiv.style.display = "block";
+          errorDiv.style.display = "none";
+
+          // Update the national ID in the table if needed
+          // document.querySelector('td:nth-child(2):nth-of-type(2)')?.textContent = nationalId;
+        }
+      });
+    </script>
+  </body>
+</html>

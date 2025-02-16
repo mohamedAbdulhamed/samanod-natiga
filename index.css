@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  text-align: start;
+  width: 100vw;
+  margin: 20px;
+}
+
+.search-again {
+  margin-bottom: 30px;
+}
+
+.search-again a,
+footer a {
+  text-decoration: none;
+  color: #88cfe7;
+  font-weight: bold;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  text-wrap-mode: nowrap;
+}
+
+th,
+td {
+  border: none !important;
+  width: 100%;
+  padding: 5px;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.subject-table th {
+  background-color: transparent;
+}
+
+tr td:first-of-type {
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  color: #666666c5;
+  width: 100%;
+  font-weight: 100;
+  font-size: 9px;
+}
+
+.caspio-logo {
+  width: 100px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.error-message {
+    text-align: center;
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    display: none;
+}
